@@ -95,7 +95,9 @@ public class RichEditor extends WebView {
 
     setVerticalScrollBarEnabled(false);
     setHorizontalScrollBarEnabled(false);
-    getSettings().setJavaScriptEnabled(true);
+    if ( !isInEditMode()) {
+      getSettings().setJavaScriptEnabled(true);
+    }
     setWebChromeClient(new WebChromeClient());
     setWebViewClient(new WebViewClient() {
       @Override public void onPageFinished(WebView view, String url) {
