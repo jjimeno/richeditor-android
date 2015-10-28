@@ -367,6 +367,10 @@ public class RichEditor extends WebView {
     exec("javascript:RE.setBlockquote();");
   }
 
+  public void setOrderedList() { exec("javascript:RE.setOrderedList();");}
+
+  public void setUnorderedList() { exec("javascript:RE.setUnorderedList();");}
+
   public void insertImage(String url, String alt) {
     exec("javascript:RE.prepareInsert();");
     exec("javascript:RE.insertImage('" + url + "', '" + alt + "');");

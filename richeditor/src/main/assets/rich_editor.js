@@ -144,6 +144,14 @@ RE.setOutdent = function() {
     document.execCommand('outdent', false, null);
 }
 
+RE.setOrderedList = function() {
+    document.execCommand('insertOrderedList', false, null);
+}
+
+RE.setUnorderedList = function() {
+    document.execCommand('insertUnorderedList', false, null);
+}
+
 RE.setJustifyLeft = function() {
     document.execCommand('justifyLeft', false, null);
 }
@@ -255,6 +263,13 @@ RE.enabledEditingItems = function(e) {
     if (document.queryCommandState('insertHorizontalRule')) {
         items.push('horizontalRule');
     }
+    if ( document.queryCommandState('insertOrderedList')){
+        items.push('insertOrderedList')
+    }
+    if ( document.queryCommandState('insertUnorderedList')){
+            items.push('insertUnorderedList')
+        }
+
     var formatBlock = document.queryCommandValue('formatBlock');
     if (formatBlock.length > 0) {
         items.push(formatBlock);
