@@ -45,6 +45,12 @@ public class MainActivity extends AppCompatActivity {
       }
     });
 
+    findViewById(R.id.action_clear).setOnClickListener(new View.OnClickListener() {
+      @Override public void onClick(View v) {
+        mEditor.removeFormat();
+      }
+    });
+
     findViewById(R.id.action_bold).setOnClickListener(new View.OnClickListener() {
       @Override public void onClick(View v) {
         mEditor.setBold();
@@ -78,6 +84,18 @@ public class MainActivity extends AppCompatActivity {
     findViewById(R.id.action_underline).setOnClickListener(new View.OnClickListener() {
       @Override public void onClick(View v) {
         mEditor.setUnderline();
+      }
+    });
+
+    findViewById(R.id.action_ordered_list).setOnClickListener(new View.OnClickListener() {
+      @Override public void onClick(View v) {
+        mEditor.setOrderedList();
+      }
+    });
+
+    findViewById(R.id.action_unordered_list).setOnClickListener(new View.OnClickListener() {
+      @Override public void onClick(View v) {
+        mEditor.setUnorderedList();
       }
     });
 
