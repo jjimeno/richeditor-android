@@ -278,7 +278,7 @@ RE.blurFocus = function() {
 }
 
 RE.removeFormat = function() {
-    execCommand('removeFormat', false, null);
+    document.execCommand('removeFormat', false, null);
 }
 
 // Event Listeners
